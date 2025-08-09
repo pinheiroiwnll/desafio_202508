@@ -43,7 +43,7 @@ Total de vendas por região.
 3. Ferramentas Utilizadas
 Google Colab (Python) para tratamento e análise de dados.
 
-Bibliotecas principais: pandas, numpy, openpyxl.
+Bibliotecas principais: pandas, datetime.
 
 Funções aplicadas para limpeza, transformação e cálculo, exportando os resultados para Excel.
 
