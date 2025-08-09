@@ -1,80 +1,53 @@
-# desafio_202508
-Análise de Vendas - Processamento de Dados
-Este projeto realiza o pré-processamento e análise de dados de vendas, gerando relatórios consolidados em Excel.
+Tratamento e Análise de Dados de Vendas
 
-Funcionalidades
-Pré-processamento
-Padronização de datas para formato YYYY-MM-DD
+Sobre
+Este projeto realiza o tratamento e análise de uma base de vendas de representantes comerciais, corrigindo inconsistências e produzindo métricas solicitadas no desafio técnico.
+O dashboard Power BI não foi desenvolvido nesta entrega.
 
-Normalização de campos de texto (uppercase e remoção de espaços)
+Arquivos
+analise_vendas.xlsx – análises e cálculos solicitados.
 
-Conversão de valores monetários para formato numérico
+dados_tratados.xlsx – planilha final tratada.
 
-Cálculo automático de comissões
+DESAFIO ETAPA 1.xlsx – base intermediária/processada.
 
-Remoção de duplicatas
+Decisões e Processos
+1. Tratamento de Dados
+Padronização de datas: convertidas para YYYY-MM-DD.
 
-Análise de Dados
-Total de vendas por representante
+Normalização de nomes: representantes e códigos de clientes uniformizados (maiúsculas e sem caracteres extras).
 
-Total de comissão por representante
+Conversão numérica: Valor Venda e Comissão convertidos para float.
 
-Ticket médio por produto
+Cálculo de Valor Comissão: Valor Venda × Comissão.
 
-Identificação de compras duplicadas
+Uniformização de status: padronização para “Pago” e “Em Aberto”.
 
-Contagem de vendas por status de pagamento
+Remoção de duplicatas: linhas com mesmo cliente, produto, data e valor removidas.
 
-Total de vendas por região
+Correção de códigos e textos: remoção de espaços, caracteres inválidos e padronização de formato.
 
-Como Usar
-Pré-requisitos:
+2. Análises Realizadas
+Total de vendas por representante.
 
-Python 3.x
+Total de comissão por representante.
 
-Bibliotecas: pandas, datetime
+Ticket médio por produto (Total de Vendas / Nº de Vendas).
 
-Execução:
+Identificação de compras duplicadas.
 
-bash
-jupyter notebook Desafio_Etapa_1.ipynb
-Arquivos:
+Contagem de vendas por status de pagamento.
 
-Entrada: DESAFIO ETAPA 1.xlsx
+Total de vendas por região.
 
-Saída tratada: dados_tratados.xlsx
+3. Ferramentas Utilizadas
+Google Colab (Python) para tratamento e análise de dados.
 
-Análise final: analise_vendas.xlsx (com múltiplas abas)
+Bibliotecas principais: pandas, numpy, openpyxl.
 
-Estrutura do Código
-Importação de bibliotecas
+Funções aplicadas para limpeza, transformação e cálculo, exportando os resultados para Excel.
 
-Carregamento dos dados
+Observações
+Dashboard Power BI não incluído nesta versão.
 
-Tratamento de dados:
-
-Datas
-
-Campos de texto
-
-Valores monetários
-
-Cálculos:
-
-Comissões
-
-Remoção de duplicatas
-
-Análises:
-
-Métricas por representante, produto e região
-
-Identificação de duplicidades
-
-Exportação dos resultados
-
-Resultados
-O script gera um arquivo Excel com 6 abas contendo as análises solicitadas, pronto para visualização e tomada de decisão.
-
-Observação: Certifique-se de que o arquivo de entrada está no mesmo diretório ou ajuste o caminho no código.
-
+Dados brutos originais não estão no repositório por confidencialidade.
