@@ -1,53 +1,76 @@
-Tratamento e Análise de Dados de Vendas
+# 📊 Tratamento e Análise de Dados de Vendas
 
-Sobre
-Este projeto realiza o tratamento e análise de uma base de vendas de representantes comerciais, corrigindo inconsistências e produzindo métricas solicitadas no desafio técnico.
-O dashboard Power BI não foi desenvolvido nesta entrega.
+> Pipeline de ETL e análise exploratória sobre base de vendas de representantes comerciais — do dado bruto ao insight de negócio.
 
-Arquivos
-analise_vendas.xlsx – análises e cálculos solicitados.
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
+![Excel](https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white)
 
-dados_tratados.xlsx – planilha final tratada.
+---
 
-DESAFIO ETAPA 1.xlsx – base intermediária/processada.
+## 🎯 Objetivo
 
-Decisões e Processos
-1. Tratamento de Dados
-Padronização de datas: convertidas para YYYY-MM-DD.
+Receber uma base de vendas com inconsistências reais e entregá-la tratada, padronizada e analisada — com métricas prontas para tomada de decisão comercial.
 
-Normalização de nomes: representantes e códigos de clientes uniformizados (maiúsculas e sem caracteres extras).
+---
 
-Conversão numérica: Valor Venda e Comissão convertidos para float.
+## 🔄 Pipeline ETL
 
-Cálculo de Valor Comissão: Valor Venda × Comissão.
+### 1. Tratamento de Dados
+- **Padronização de datas** → formato `YYYY-MM-DD`
+- **Normalização de nomes** → representantes e clientes em maiúsculas, sem caracteres extras
+- **Conversão numérica** → `Valor Venda` e `Comissão` convertidos para `float`
+- **Cálculo de comissão** → `Valor Venda × % Comissão`
+- **Padronização de status** → uniformizado para `Pago` / `Em Aberto`
+- **Remoção de duplicatas** → mesmo cliente + produto + data + valor
+- **Limpeza geral** → espaços, caracteres inválidos e formatos inconsistentes
 
-Uniformização de status: padronização para “Pago” e “Em Aberto”.
+### 2. Análises Realizadas
+| Métrica | Descrição |
+|---|---|
+| 💰 Total de vendas | Por representante comercial |
+| 📈 Total de comissão | Por representante |
+| 🎯 Ticket médio | Total Vendas ÷ Nº de Vendas por produto |
+| 🔁 Duplicatas | Identificação e remoção de compras repetidas |
+| 📋 Status de pagamento | Contagem por categoria (Pago / Em Aberto) |
+| 🗺️ Vendas por região | Distribuição geográfica das vendas |
 
-Remoção de duplicatas: linhas com mesmo cliente, produto, data e valor removidas.
+---
 
-Correção de códigos e textos: remoção de espaços, caracteres inválidos e padronização de formato.
+## 🗂️ Estrutura do Projeto
 
-2. Análises Realizadas
-Total de vendas por representante.
+```
+analise-dados-vendas/
+│
+├── analise_vendas.xlsx       # Análises e métricas finais
+├── dados_tratados.xlsx       # Base tratada e padronizada
+├── notebook_analise.ipynb    # Pipeline completo no Jupyter/Colab
+└── README.md
+```
 
-Total de comissão por representante.
+> ⚠️ Os dados brutos originais não estão no repositório por questões de confidencialidade.
 
-Ticket médio por produto (Total de Vendas / Nº de Vendas).
+---
 
-Identificação de compras duplicadas.
+## 🛠️ Tecnologias
 
-Contagem de vendas por status de pagamento.
+- **Python** — lógica de tratamento e análise
+- **Pandas** — manipulação e transformação de dados
+- **Datetime** — padronização e conversão de datas
+- **Google Colab** — ambiente de desenvolvimento
+- **OpenPyXL** — exportação para Excel
 
-Total de vendas por região.
+---
 
-3. Ferramentas Utilizadas
-Google Colab (Python) para tratamento e análise de dados.
+## 📌 Aprendizados
 
-Bibliotecas principais: pandas, datetime.
+Este projeto reforçou na prática que **80% do trabalho em dados é limpeza e padronização**. Antes de qualquer análise, o dado precisa ser confiável — e isso exige atenção a detalhes que passam despercebidos em bases reais.
 
-Funções aplicadas para limpeza, transformação e cálculo, exportando os resultados para Excel.
+---
 
-Observações
-Dashboard Power BI não incluído nesta versão.
+## 👨‍💻 Autor
 
-Dados brutos originais não estão no repositório por confidencialidade.
+**Guilherme Pinheiro Serafim**
+Analista de Dados | GFT Promotora
+[LinkedIn](https://linkedin.com/in/guilherme-pinheiro-527a0927a) · [classespvp@gmail.com](mailto:classespvp@gmail.com)
